@@ -1,0 +1,7 @@
+{
+	"I want to reserve a table": {
+		"path": "restaurant-reservation",
+		"text": "Pick from the three hottest restaurants:",
+		"buttonText": "Make a reservation"
+	}
+}
