@@ -41,14 +41,14 @@ window.app = {
   				var $screen = $('.screen');
   				var $actionBtns = $('.action-next, .action-back, .action-full, .list-item-next');
 
-     			if (docWidth < 770) {
+     		//	if (docWidth < 770) {
 					$screen.hide().eq (0).css({ display: 'flex' })
 					$actionBtns.on('click', function(e) {
 						var $this = $(this);
 						var $parent = $this.parents('.screen');
 						var direction = $this.data('direction');
 						var $next = (direction == 'next') ? $parent.next('.screen') : (direction == 'back') ? $parent.prev('.screen') : $('#' + direction);
-						
+
 						if ($next.length == 0) {
 							onComplete(app, $this);
 							WebviewSdk.close();
@@ -60,7 +60,7 @@ window.app = {
 						$next.css({ display: 'flex' });
 						$next.find('.body').scrollTop (0);
 					});
-    			}
+    		//	}
 
     			$('.collapse').on('shown.bs.collapse', function () {
       				this.scrollIntoView();

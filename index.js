@@ -47,7 +47,6 @@ function webviewSubmissionHandler(req, res) {
   		res.status(500).send(err.message);
   	});
 }
-
 function appUserMessageHandler(req, res) {
     if (req.body.trigger !== 'message:appUser') {
       return res.end();
@@ -69,7 +68,6 @@ function appUserMessageHandler(req, res) {
    				res.status(500).send(err.message);
    			})
     }
-
     res.end();
 }
 
@@ -84,5 +82,6 @@ function sendWebView(userId, text, buttonText, path) {
                 uri: `${process.env.SERVICE_URL}/examples/${path}?userId=${userId}&appId=${process.env.APP_ID}`,
                 fallback: process.env.SERVICE_URL
             }]
-        });
+        })
+
 }
